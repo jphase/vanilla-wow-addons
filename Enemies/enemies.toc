@@ -1,6 +1,0 @@
-##Interface:11200 -- This is the "level" of the interface. In the case of 1.12.1 it's 11200
-##Title: Enemies
-##Notes: Addon to track nearby members of the opposite faction
-##OptionalDeps: -- Optional dependencies.
-##Dependencies:
-enemies.lua
