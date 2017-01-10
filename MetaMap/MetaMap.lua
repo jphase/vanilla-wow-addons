@@ -1550,7 +1550,6 @@ function MetaMap_CreateLineObject(lineNumber)
 end
 
 function MetaMapNotes_AddNewNote(continent, zone, xPos, yPos, name, inf1, inf2, creator, icon, ncol, in1c, in2c, mininote)
-
 	if(xPos == 0 and yPos == 0) then
 		MetaMap_StatusPrint(METAMAPNOTES_INVALIDZONE, true);
 		return;
@@ -2317,11 +2316,6 @@ end
 
 function MetaMapNotes_GetZoneTableSize(zoneTable)
 	local i = 0;
-	
-	if (zoneTable == nil) then
-		return -1;
-	end
-	
 	for id in zoneTable do
 		i = i + 1;
 	end
