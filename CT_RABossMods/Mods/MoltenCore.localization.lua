@@ -33,7 +33,7 @@ CT_RABOSS_MAGMADAR_TRANQSHOT		= "*** FRENZY ALERT - HUNTER TRANQ SHOT NOW! ***";
 CT_RABOSS_MAGMADAR_5SECWARN		= "*** 5 SECONDS UNTIL AE FEAR ***";
 CT_RABOSS_MAGMADAR_30SECWARN		= "*** AE FEAR ALERT - 30 seconds till next ***";
 
-CT_RABOSS_MAGMADAR_FRENZY 		= "%s goes into a killing frenzy!";
+CT_RABOSS_MAGMADAR_FRENZY 		= "goes into a killing frenzy!";
 CT_RABOSS_MAGMADAR_PANIC 		= "by Panic.";
 
 

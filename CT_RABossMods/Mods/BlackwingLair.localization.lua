@@ -1,6 +1,6 @@
 -- Vaelastrasz
 CT_RABOSS_VAEL_BURNINGWARNTELL 		= "YOU ARE BURNING!";
-CT_RABOSS_VAEL_TELL_TARGET			= "Send tells to targets";
+CT_RABOSS_VAEL_TELL_TARGET		= "Send tells to targets";
 CT_RABOSS_VAEL_TELL_TARGET_INFO		= "Sends a tell to players that are affected with Burning Adrenaline";
 
 -- Firemaw
@@ -15,7 +15,7 @@ CT_RABOSS_FIREMAW_SHADOWFLAMETEST	= "charges!"
 CT_RABOSS_FIREMAW_SHADOWFLAME_DETECT	= "Firemaw begins to cast Shadow Flame.";
 
 -- Ebonroc
-CT_RABOSS_EBONROC_BUFFET			= "Ebonroc begins to cast Wing Buffet.";
+CT_RABOSS_EBONROC_BUFFET		= "Ebonroc begins to cast Wing Buffet.";
 CT_RABOSS_EBONROC_BUFFET_INFO		= "Displays to the raid when Ebonroc casts Flame Buffet and Shadowflame.";
 CT_RABOSS_EBONROC_BUFFET_WARN		= "** Ebonroc begins to cast Wing buffet. **";
 CT_RABOSS_EBONROC_3SECWARN		= "** 3 Seconds before Ebonroc casts Wing buffet. **";
@@ -27,11 +27,11 @@ CT_RABOSS_EBONROC_SHADOWFLAME_DETECT	= "Ebonroc begins to cast Shadow Flame.";
 CT_RABOSS_EBONROC_AFFLICT_BOMB 		= "^([^%s]+) ([^%s]+) afflicted by Shadow of Ebonroc";
 CT_RABOSS_EBONROC_AFFLICT_SELF_MATCH1	= "You";
 CT_RABOSS_EBONROC_AFFLICT_SELF_MATCH2	= "are";
-CT_RABOSS_EBONROC_SOEOTHER = "*** %s HAS SHADOW OF EBONROC ***";
-CT_RABOSS_EBONROC_SOEYOU = "*** YOU HAVE SHADOW OF EBONROC ***";
+CT_RABOSS_EBONROC_SOEOTHER		= "*** %s HAS SHADOW OF EBONROC ***";
+CT_RABOSS_EBONROC_SOEYOU		= "*** YOU HAVE SHADOW OF EBONROC ***";
 
 -- Flamegor
-CT_RABOSS_FLAMEGOR_BUFFET			= "Flamegor begins to cast Wing Buffet.";
+CT_RABOSS_FLAMEGOR_BUFFET		= "Flamegor begins to cast Wing Buffet.";
 CT_RABOSS_FLAMEGOR_BUFFET_INFO		= "Displays to the raid when Flamegor casts Flame Buffet and Shadowflame.";
 CT_RABOSS_FLAMEGOR_BUFFET_WARN		= "** Flamegor begins to cast Wing buffet. **";
 CT_RABOSS_FLAMEGOR_3SECWARN		= "** 3 Seconds before Flamegor casts Wing buffet. **";
@@ -40,7 +40,7 @@ CT_RABOSS_FLAMEGOR_SHADOWFLAME_WARN	= "** Shadow Flame Incoming! **";
 CT_RABOSS_FLAMEGOR_TRANQSHOT		= "*** FRENZY ALERT - HUNTER TRANQ SHOT NOW! ***";
 
 CT_RABOSS_FLAMEGOR_SHADOWFLAME_DETECT	= "Flamegor begins to cast Shadow Flame.";
-CT_RABOSS_FLAMEGOR_FRENZY 			= "%s goes into a frenzy!";
+CT_RABOSS_FLAMEGOR_FRENZY 		= "goes into a frenzy!";
 
 -- Chromaggus
 	-- General Info
@@ -66,8 +66,8 @@ CT_RABOSS_CHROMAGGUS_NEWVULNERABILITYFOUNDWARNING = "*** NEW SPELL VULNERABILITY
 CT_RABOSS_CHROMAGGUS_NEWVULNERABILITYWARNING = "*** SPELL VULNERABILITY CHANGED ***";
 CT_RABOSS_CHROMAGGUS_FRENZYCASTWARNING = "*** FRENZY - TRANQ SHOT ***";
 	-- Emotes
-CT_RABOSS_CHROMAGGUS_FRENZYEMOTE = "%s goes into a killing frenzy!";
-CT_RABOSS_CHROMAGGUS_SHIELDEMOTE = "%s flinches as its skin shimmers.";
+CT_RABOSS_CHROMAGGUS_FRENZYEMOTE = "goes into a killing frenzy!";
+CT_RABOSS_CHROMAGGUS_SHIELDEMOTE = "flinches as its skin shimmers";
 	-- Constants
 CT_RABOSS_CHROMAGGUS_WAITSHIELDCLEAR = 2.5;
 CT_RABOSS_CHROMAGGUS_BREATHWARNINGTIME = 50;
@@ -138,11 +138,11 @@ CT_RABOSS_NEFARIAN_5SECCALLWARNING  = "*** CLASS CALL INC ***";
 
 if ( GetLocale() == "deDE" ) then
 	-- Vaelastrasz
-	CT_RABOSS_VAEL_AFFLICT_BURN			=  "^([^%s]+) ([^%s]+) von Brennendes Adrenalin betroffen";
-	CT_RABOSS_VAEL_AFFLICT_SELF_MATCH1  =  "Ihr";
-	CT_RABOSS_VAEL_AFFLICT_SELF_MATCH2  =  "seid";
+	CT_RABOSS_VAEL_AFFLICT_BURN		=  "^([^%s]+) ([^%s]+) von Brennendes Adrenalin betroffen";
+	CT_RABOSS_VAEL_AFFLICT_SELF_MATCH1 	=  "Ihr";
+	CT_RABOSS_VAEL_AFFLICT_SELF_MATCH2 	=  "seid";
 	CT_RABOSS_VAEL_BURNINGWARNTELL 		= "YOU ARE BURNING!";
-	CT_RABOSS_VAEL_TELL_TARGET			= "Send tells to targets";
+	CT_RABOSS_VAEL_TELL_TARGET		= "Send tells to targets";
 	CT_RABOSS_VAEL_TELL_TARGET_INFO		= "Sends a tell to players that are affected with Burning Adrenaline";
 	
 	-- Firemaw
@@ -157,7 +157,7 @@ if ( GetLocale() == "deDE" ) then
 	CT_RABOSS_FIREMAW_SHADOWFLAME_DETECT	= "Firemaw beginnt Schattenflamme zu wirken.";
 	
 	-- Ebonroc
-	CT_RABOSS_EBONROC_BUFFET			= "Ebonroc beginnt Fl\195\188gelpuffer zu wirken.";
+	CT_RABOSS_EBONROC_BUFFET		= "Ebonroc beginnt Fl\195\188gelpuffer zu wirken.";
 	CT_RABOSS_EBONROC_BUFFET_INFO		= "Displays to the raid when Ebonroc casts Flame Buffet and Shadowflame.";
 	CT_RABOSS_EBONROC_BUFFET_WARN		= "** Ebonroc begins to cast Wing buffet. **";
 	CT_RABOSS_EBONROC_3SECWARN		= "** 3 Seconds before Ebonroc casts Wing buffet. **";
@@ -169,11 +169,11 @@ if ( GetLocale() == "deDE" ) then
 	CT_RABOSS_EBONROC_AFFLICT_BOMB 		= "^([^%s]+) ([^%s]+) ist von Ebonroc-Schatten betroffen.";
 	CT_RABOSS_EBONROC_AFFLICT_SELF_MATCH1	= "Ihr";
 	CT_RABOSS_EBONROC_AFFLICT_SELF_MATCH2	= "seid";
-	CT_RABOSS_EBONROC_SOEOTHER = "*** %s HAS SHADOW OF EBONROC ***";
-	CT_RABOSS_EBONROC_SOEYOU = "*** YOU HAVE SHADOW OF EBONROC ***";
+	CT_RABOSS_EBONROC_SOEOTHER 		= "*** %s HAS SHADOW OF EBONROC ***";
+	CT_RABOSS_EBONROC_SOEYOU 		= "*** YOU HAVE SHADOW OF EBONROC ***";
 	
 	-- Flamegor
-	CT_RABOSS_FLAMEGOR_BUFFET			= "Flamegor beginnt Fl\195\188gelpuffer zu wirken.";
+	CT_RABOSS_FLAMEGOR_BUFFET		= "Flamegor beginnt Fl\195\188gelpuffer zu wirken.";
 	CT_RABOSS_FLAMEGOR_BUFFET_INFO		= "Displays to the raid when Flamegor casts Flame Buffet and Shadowflame.";
 	CT_RABOSS_FLAMEGOR_BUFFET_WARN		= "** Flamegor begins to cast Wing buffet. **";
 	CT_RABOSS_FLAMEGOR_3SECWARN		= "** 3 Seconds before Flamegor casts Wing buffet. **";
@@ -182,7 +182,7 @@ if ( GetLocale() == "deDE" ) then
 	CT_RABOSS_FLAMEGOR_TRANQSHOT		= "*** FRENZY ALERT - HUNTER TRANQ SHOT NOW! ***";
 	
 	CT_RABOSS_FLAMEGOR_SHADOWFLAME_DETECT	= "Flamegor beginnt Schattenflamme zu wirken.";
-	CT_RABOSS_FLAMEGOR_FRENZY 			= "ger\195\164t in Raserei!";
+	CT_RABOSS_FLAMEGOR_FRENZY 		= "ger\195\164t in Raserei!";
 	
 	-- Chromaggus
 		-- General Info
@@ -208,7 +208,7 @@ if ( GetLocale() == "deDE" ) then
 	CT_RABOSS_CHROMAGGUS_NEWVULNERABILITYWARNING = "*** SPELL VULNERABILITY CHANGED ***";
 	CT_RABOSS_CHROMAGGUS_FRENZYCASTWARNING = "*** FRENZY - TRANQ SHOT ***";
 		-- Emotes
-	CT_RABOSS_CHROMAGGUS_FRENZYEMOTE = "Chromaggus ger\195\164t in t\195\182dliche Raserei!";
+	CT_RABOSS_CHROMAGGUS_FRENZYEMOTE = "ger\195\164t in t\195\182dliche Raserei!";
 	CT_RABOSS_CHROMAGGUS_SHIELDEMOTE = "als die Haut schimmert";
 		-- Constants
 	CT_RABOSS_CHROMAGGUS_WAITSHIELDCLEAR = 2.5;
@@ -325,33 +325,33 @@ elseif ( GetLocale() == "frFR" ) then
 	CT_RABOSS_FLAMEGOR_SHADOWFLAME_WARN = "** il cast Flamme d'ombre **";
 	CT_RABOSS_FLAMEGOR_TRANQSHOT = "*** ALERTE FRENESIE - CHASSEURS TIR TRANQUILISANT MAINTENANT! ***";
 	CT_RABOSS_FLAMEGOR_SHADOWFLAME_DETECT = "Flamegor commence 195160 lancer Flamme d'ombre.";
-	CT_RABOSS_FLAMEGOR_FRENZY = "Flamegor est pris de fr195169n195169sie !";
+	CT_RABOSS_FLAMEGOR_FRENZY = "est pris de fr195169n195169sie !";
 	
 	-- Chromaggus
 	CT_RABOSS_CHROMAGGUS_INFO = "Displays each breath attack, changing resistances, and when he goes into a frenzy."
 	CT_RABOSS_CHROMAGGUS_TRANQSHOT = "*** ALERTE FRENESIE - CHASSEURS TIR TRANQUILISANT MAINTENANT! ***";
 	CT_RABOSS_CHROMAGGUS_RESIST_CHANGE = "** les resistance de Chromaggus ont Change! **";
 	
-	CT_RABOSS_CHROMAGGUS_FROSTBURNCAST = "Chromaggus commence 195160 lancer Brûlure de givre.";
+	CT_RABOSS_CHROMAGGUS_FROSTBURNCAST = "Chromaggus commence \195\160 lancer Brûlure de givre.";
 	CT_RABOSS_CHROMAGGUS_FROSTBURN = "** Chromaggus is casting Frost Burn **";
 	CT_RABOSS_CHROMAGGUS_FROSTBURN8SEC = "** Frost Burn - 8 Seconds **";
 	
-	CT_RABOSS_CHROMAGGUS_TIMELAPSECAST = "Chromaggus commence 195160 lancer Trou de temps.";
+	CT_RABOSS_CHROMAGGUS_TIMELAPSECAST = "Chromaggus commence \195\160 lancer Trou de temps.";
 	CT_RABOSS_CHROMAGGUS_TIMELAPSE = "** Chromaggus is casting Time Lapse **";
 	CT_RABOSS_CHROMAGGUS_TIMELAPSE8SEC = "** Time Lapse - 8 Seconds **";
 	
-	CT_RABOSS_CHROMAGGUS_IGNITECAST = "Chromaggus commence 195160 lancer Enflammer la chair.";
+	CT_RABOSS_CHROMAGGUS_IGNITECAST = "Chromaggus commence \195\160 lancer Enflammer la chair.";
 	CT_RABOSS_CHROMAGGUS_IGNITE = "** Chromaggus is casting Ignite Flesh **";
 	CT_RABOSS_CHROMAGGUS_IGNITE8SEC = "** Ignite Flesh - 8 Seconds **";
 	
-	CT_RABOSS_CHROMAGGUS_ACIDCAST = "Chromaggus commence 195160 lancer Acide corrosif.";
+	CT_RABOSS_CHROMAGGUS_ACIDCAST = "Chromaggus commence \195\160 lancer Acide corrosif.";
 	CT_RABOSS_CHROMAGGUS_ACID = "** Chromaggus is casting Corrosive Acid **";
 	CT_RABOSS_CHROMAGGUS_ACID8SEC = "** Corrosive Acid - 8 Seconds **";
 	
-	CT_RABOSS_CHROMAGGUS_INCINERATECAST = "Chromaggus commence 195160 lancer Incinérer.";
+	CT_RABOSS_CHROMAGGUS_INCINERATECAST = "Chromaggus commence \195\160 lancer Incinérer.";
 	CT_RABOSS_CHROMAGGUS_INCINERATE = "** Chromaggus is casting Incinerate **";
 	CT_RABOSS_CHROMAGGUS_INCINERATE8SEC = "** Incinerate - 8 Seconds **";
 	
-	CT_RABOSS_CHROMAGGUS_FRENZY = "entre dans une sanglante fr195169n195169sie !";
-	CT_RABOSS_CHROMAGGUS_RESIST = "grimace lorsque sa peau se met à briller.";
+	CT_RABOSS_CHROMAGGUS_FRENZY = "entre dans une sanglante fr\195\169n\195\169sie";
+	CT_RABOSS_CHROMAGGUS_RESIST = "grimace lorsque sa peau se met à briller";
 end

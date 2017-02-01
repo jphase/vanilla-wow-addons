@@ -4,16 +4,16 @@ CT_RABOSS_MARLI_REGEXP			= "Aid me my brood!$"
 CT_RABOSS_MARLI_ADDS			= "SPIDERS SPAWNED"
 
 -- Bloodlord Mandokir
-CT_RABOSS_MANDOKIR_INFO 			= "Displays a warning when you or nearby players are being watched.";
+CT_RABOSS_MANDOKIR_INFO 		= "Displays a warning when you or nearby players are being watched.";
 CT_RABOSS_MANDOKIR_TELL_TARGET		= "Send tells to targets";
 CT_RABOSS_MANDOKIR_TELL_TARGET_INFO	= "Sends a tell to players that are being watched";
 CT_RABOSS_MANDOKIR_WATCHWARNYOU		= "*** YOU ARE BEING WATCHED ***";
 CT_RABOSS_MANDOKIR_WATCHWARNTELL	= "YOU ARE BEING WATCHED!";
-CT_RABOSS_MANDOKIR_WATCHWARNRAID    = " IS BEING WATCHED";
-CT_RABOSS_MANDOKIR_REGEXP			= "([^%s]+)! I'm watching you!$";
+CT_RABOSS_MANDOKIR_WATCHWARNRAID    	= " IS BEING WATCHED";
+CT_RABOSS_MANDOKIR_REGEXP		= "([^%s]+)! I'm watching you!$";
 
 -- Jin'do the Hexxer
-CT_RABOSS_JINDO_TELL_TARGET			= "Send tells to targets";
+CT_RABOSS_JINDO_TELL_TARGET		= "Send tells to targets";
 CT_RABOSS_JINDO_TELL_TARGET_INFO	= "Sends a tell to players that are afflicted by Delusions of Jin'do.";
 CT_RABOSS_JINDO_ALERT_NEARBY		= "Alert for nearby players";
 CT_RABOSS_JINDO_ALERT_NEARBY_INFO	= "Alert you when nearby players are afflicted by Delusions of Jin'do."
@@ -22,7 +22,7 @@ CT_RABOSS_JINDO_CURSEWARNYOU		= "*** YOU ARE CURSED ***";
 CT_RABOSS_JINDO_CURSEWARNTELL		= "YOU ARE CURSED!";
 
 CT_RABOSS_JINDO_AFFLICT_CURSE 		= "^([^%s]+) ([^%s]+) afflicted by Delusions of Jin'do";
-CT_RABOSS_JINDO_AFFLICT_SELF_MATCH1 = "You";
+CT_RABOSS_JINDO_AFFLICT_SELF_MATCH1 	= "You";
 CT_RABOSS_JINDO_AFFLICT_SELF_MATCH2	= "are";
 
 -- Hakkar

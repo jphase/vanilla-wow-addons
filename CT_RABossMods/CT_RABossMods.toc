@@ -1,5 +1,5 @@
 ## Interface: 11200
-## Version: 1.241 (CTMod 1.856)
+## Version: 1.242 (CTMod 1.856)
 ## Title: CT_RABossMods
 ## Notes: An extension to CT_RaidAssist that adds small mods that help you with various raid encounters.
 ## Dependencies: CT_RaidAssist

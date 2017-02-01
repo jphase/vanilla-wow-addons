@@ -5,7 +5,7 @@ CT_RABOSS_HEIGAN_NAME = "Heigan the Unclean";
 CT_RABOSS_HEIGAN_CLOUD = "The end is upon you.";
 CT_RABOSS_HEIGAN_INFO = "Alerts for Plague Cloud and Decrepit Fever.";
 CT_RABOSS_HEIGAN_FEVERREGEXP = "^([^%s]+) is afflicted by Decrepit Fever%.$";
-CT_RABOSS_HEIGAN_DEATH = "takes his last breath.";
+CT_RABOSS_HEIGAN_DEATH = "takes his last breath";
 
 CT_RABOSS_HEIGAN_CLOUDALERT = "*** PLAGUE CLOUD - START AT ENTRANCE ***";
 CT_RABOSS_HEIGAN_CLOUDSTOP5 = "*** STOPPING IN 5 - BE READY ***";
@@ -14,6 +14,8 @@ CT_RABOSS_HEIGAN_PRECLOUD = "*** CLOUD IN %d ***";
 CT_RABOSS_HEIGAN_ENGAGED = "*** ENGAGED - SPLASH IN 15 SEC ***";
 CT_RABOSS_HEIGAN_SPLASH5 = "*** ENTRANCE SPLASH IN 5 SEC ***";
 CT_RABOSS_HEIGAN_FEVERWARNING = "*** DISEASE - DISPEL ***";
+CT_RABOSS_HEIGAN_FEVERALERT = "Alert for Fever";
+CT_RABOSS_HEIGAN_FEVERALERT_INFO = "Alerts for Decprecit Fever in raid chat, when it is cast.";
 
 CT_RABOSS_GOTHIK_INFO = "Alerts for the spawns.";
 CT_RABOSS_GOTHIK_ENGAGED = "Engaged - First spawn in 10 sec";
@@ -63,6 +65,7 @@ CT_RABOSS_THADDIUS_ENGAGEYELL2 = "Feed you to master!";
 CT_RABOSS_THADDIUS_PHASETWOYELL1 = "Eat... your... bones...";
 CT_RABOSS_THADDIUS_PHASETWOYELL2 = "Kill...";
 CT_RABOSS_THADDIUS_PHASETWOYELL3 = "Break... you!!";
+CT_RABOSS_THADDIUS_POLARITYSHIFTYELL = "Now you feel pain...";
 CT_RABOSS_THADDIUS_SURGESTRING = "Stalagg gains Power Surge.";
 CT_RABOSS_THADDIUS_POLARITYCASTSTRING = "Thaddius begins to cast Polarity Shift.";
 
@@ -80,6 +83,9 @@ CT_RABOSS_THADDIUS_CHARGE_Positive = "POSITIVE - LEFT SIDE";
 CT_RABOSS_THADDIUS_CHARGE_Negative = "NEGATIVE - RIGHT SIDE";
 CT_RABOSS_THADDIUS_ENRAGEIN = "- Enrage in %s -";
 CT_RABOSS_THADDIUS_ENRAGE = "*** ENRAGED ***";
-CT_RABOSS_THADDIUS_ENRAGESTRING = "goes into a berserker rage!";
+CT_RABOSS_THADDIUS_ENRAGESTRING = "%s goes into a berserker rage!";
 CT_RABOSS_THADDIUS_BOSSNAME = "Thaddius";
 CT_RABOSS_THADDIUS_POLARITY = "-+ Polarity Shift - Check debuff +-";
+CT_RABOSS_THADDIUS_NOCHANGE = "NO CHANGE";
+CT_RABOSS_THADDIUS_POSITIVE = "++ POSITIVE ++";
+CT_RABOSS_THADDIUS_NEGATIVE = "-- NEGATIVE --";

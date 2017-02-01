@@ -33,8 +33,8 @@ CT_RABOSS_HUHURAN_FRENZY = "Alert for Frenzy";
 CT_RABOSS_HUHURAN_FRENZY_INFO = "Alerts for when Huhuran goes into a frenzy (that is, the effect that can be dispelled by Tranquilizing Shot).";
 
 CT_RABOSS_HUHURAN_BOSSNAME = "Princess Huhuran";
-CT_RABOSS_HUHURAN_BERSERKSTRING = "goes into a berserker rage!";
-CT_RABOSS_HUHURAN_FRENZYSTRING = "goes into a frenzy!";
+CT_RABOSS_HUHURAN_BERSERKSTRING = "%s goes into a berserker rage!";
+CT_RABOSS_HUHURAN_FRENZYSTRING = "%s goes into a frenzy!";
 CT_RABOSS_HUHURAN_BERSERKWARNING = "*** BERSERK ***";
 CT_RABOSS_HUHURAN_FRENZYWARNING = "*** FRENZY - TRANQ SHOT NOW ***";
 
@@ -84,7 +84,7 @@ CT_RABOSS_VISCIDUS_TOXINREGEXP = "^([^%s]+) ([^%s]+) afflicted by Toxin.$";
 CT_RABOSS_VISCIDUS_TOXIN_WARNING = "YOU ARE IN POISON CLOUD!";
 CT_RABOSS_VISCIDUS_TYPE_YOU = "are";
 CT_RABOSS_VISCIDUS_YOU = "You";
-CT_RABOSS_VISCIDUS_FREEZE_STRING = "is frozen solid!";
+CT_RABOSS_VISCIDUS_FREEZE_STRING = "%s is frozen solid!";
 CT_RABOSS_VISCIDUS_FREEZE_MESSAGE = "*** FROZEN ***";
 
 -- C'Thun
@@ -92,7 +92,7 @@ CT_RABOSS_CTHUN_INFO = "Alerts for Eye Tentacle spawns and his weakened state in
 
 CT_RABOSS_CTHUN_BOSSNAME_PHASE2 = "C'Thun";
 CT_RABOSS_CTHUN_BOSSNAME_PHASE1 = "Eye of C'Thun";
-CT_RABOSS_CTHUN_WEAKENED = "is weakened!";
+CT_RABOSS_CTHUN_WEAKENED = "%s is weakened!";
 CT_RABOSS_CTHUN_TENTACLECAST = "C'Thun casts Summon Eye Tentacle.";
 CT_RABOSS_CTHUN_VULNERABLE45 = "**** WEAKENED FOR 45 SEC - DPS NOW ***";
 CT_RABOSS_CTHUN_INVULNERABLE10 = "*** 10 SEC TO INVULNERABLE ***";
@@ -111,7 +111,7 @@ CT_RABOSS_BURU_INFO = "Displays a warning when Buru the Gorger watches someone w
 CT_RABOSS_BURU_TELL_TARGET = "Send tells to target";
 CT_RABOSS_BURU_TELL_TARGET_INFO = "Sends a tell to the person Buru is watching.";
 
-CT_RABOSS_BURU_EYEREGEXP = "sets eyes on (.+)!";
+CT_RABOSS_BURU_EYEREGEXP = "^%%s sets eyes on (.+)!$";
 CT_RABOSS_BURU_EYEWARNING = "*** %s IS BEING WATCHED ***";
 CT_RABOSS_BURU_EYEWARNING_YOU = "*** YOU ARE BEING WATCHED ***";
 
@@ -159,8 +159,8 @@ CT_RABOSS_RAJAXX_FINALWAVE = "*** INCOMING GENERAL RAJAXX ***";
 -- Moam
 CT_RABOSS_MOAM_INFO = "Alerts for when adds will spawn.";
 
-CT_RABOSS_MOAM_FEAR = "senses your fear.";
-CT_RABOSS_MOAM_STONE = "drains your mana and turns to stone.";
+CT_RABOSS_MOAM_FEAR = "%s senses your fear.";
+CT_RABOSS_MOAM_STONE = "%s drains your mana and turns to stone.";
 CT_RABOSS_MOAM_RETURNREGEXP = "^Energize fades from Moam%.$";
 
 CT_RABOSS_MOAM_ENGAGE = "*** MOAM ENGAGED - 90 SECONDS TO ADDS ***";

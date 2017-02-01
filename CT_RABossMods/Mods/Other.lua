@@ -19,7 +19,7 @@ function CT_RABoss_Onyxia_EventHandler(event)
 	if ( not CT_RABoss_Mods["Onyxia"] or not CT_RABoss_Mods["Onyxia"]["status"] or not CT_RABoss_Mods["Onyxia"].enabled ) then
 		return;
 	end
-	if ( event == "CHAT_MSG_MONSTER_EMOTE" and arg1 == CT_RABOSS_ONYXIA_BREATH ) then
+	if ( event == "CHAT_MSG_MONSTER_EMOTE" and string.find(arg1, CT_RABOSS_ONYXIA_BREATH) ) then
 		CT_RABoss_Announce(CT_RABOSS_ONYXIA_DEEPBREATH, CT_RABoss_Mods["Onyxia"]["announce"]);
 		CT_RABoss_PlaySound(2);
 	elseif ( event == "CHAT_MSG_MONSTER_YELL" and string.find(arg1, CT_RABOSS_ONYXIA_PHASE2) and CT_RABoss_Mods["Onyxia"]["warnPhase2"] ) then

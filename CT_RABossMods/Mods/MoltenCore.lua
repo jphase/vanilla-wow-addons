@@ -105,7 +105,7 @@ function CT_RABoss_Magmadar_EventHandler(event)
 	if ( not CT_RABoss_Mods["Magmadar"] or not CT_RABoss_Mods["Magmadar"]["status"] or not CT_RABoss_Mods["Magmadar"].enabled ) then
 		return;
 	end
-	if ( (event == "CHAT_MSG_MONSTER_EMOTE") and (arg1 == CT_RABOSS_MAGMADAR_FRENZY) and (CT_RABoss_Mods["Magmadar"]["frenzyAlert"]) ) then
+	if ( (event == "CHAT_MSG_MONSTER_EMOTE") and ( string.find(arg1, CT_RABOSS_MAGMADAR_FRENZY)) and (CT_RABoss_Mods["Magmadar"]["frenzyAlert"]) ) then
 		CT_RABoss_Announce(CT_RABOSS_MAGMADAR_TRANQSHOT, CT_RABoss_Mods["Magmadar"]["announce"]);
 		CT_RABoss_PlaySound(2);
 

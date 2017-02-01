@@ -9,10 +9,12 @@ function CT_RABoss_Heigan_OnLoad()
 	CT_RABoss_AddMod("Heigan the Unclean", CT_RABOSS_HEIGAN_INFO, 1, CT_RABOSS_LOCATIONS_NAXXRAMAS);
 	CT_RABoss_AddEvent("Heigan the Unclean", "CHAT_MSG_MONSTER_YELL", CT_RABoss_Heigan_EventHandler);
 	CT_RABoss_AddEvent("Heigan the Unclean", "CHAT_MSG_MONSTER_EMOTE", CT_RABoss_Heigan_EventHandler);
-	CT_RABoss_AddDropDownButton("Heigan the Unclean", { CT_RABOSS_ANNOUNCE, CT_RABOSS_ANNOUNCE_INFO .. CT_RABOSS_REQ_LEADER_OR_PROM }, "CT_RABoss_ModInfo", "announce", "CT_RABoss_SetInfo");
 	CT_RABoss_AddEvent("Heigan the Unclean", "CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE", CT_RABoss_Heigan_EventHandler);
 	CT_RABoss_AddEvent("Heigan the Unclean", "CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE", CT_RABoss_Heigan_EventHandler);
 	CT_RABoss_AddEvent("Heigan the Unclean", "CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE", CT_RABoss_Heigan_EventHandler);
+	CT_RABoss_AddDropDownButton("Heigan the Unclean", { CT_RABOSS_ANNOUNCE, CT_RABOSS_ANNOUNCE_INFO .. CT_RABOSS_REQ_LEADER_OR_PROM }, "CT_RABoss_ModInfo", "announce", "CT_RABoss_SetInfo");
+	CT_RABoss_AddDropDownButton("Heigan the Unclean", { CT_RABOSS_HEIGAN_FEVERALERT, CT_RABOSS_HEIGAN_FEVERALERT_INFO }, "CT_RABoss_ModInfo", "feverAlert", "CT_RABoss_SetInfo");
+	
 	CT_RA_RegisterSlashCmd("/heiganstop", "Stop the Heigan the Unclean bossmod timer.", 30, "HEIGANSTOP", function()
 		CT_RABoss_UnSchedule("CT_RABoss_Heigan_EventHandler");
 	end, "/heiganstop");
@@ -37,7 +39,7 @@ function CT_RABoss_Heigan_EventHandler(event)
 			CT_RABoss_Schedule("CT_RABoss_Heigan_EventHandler", 45, "cloudstop");
 		end
 	elseif ( event == "CHAT_MSG_MONSTER_EMOTE" ) then
-		if ( arg2 == CT_RABOSS_HEIGAN_NAME and arg1 == CT_RABOSS_HEIGAN_DEATH ) then
+		if ( arg2 == CT_RABOSS_HEIGAN_NAME and string.find(arg1, CT_RABOSS_HEIGAN_DEATH) ) then
 			CT_RABoss_UnSchedule("CT_RABoss_Heigan_EventHandler");
 		end
 	elseif ( event == "splash5" ) then
@@ -55,7 +57,7 @@ function CT_RABoss_Heigan_EventHandler(event)
 		CT_RABoss_Announce(CT_RABOSS_HEIGAN_CLOUDSTOP, mod["announce"]);
 	elseif ( event == "feverUntrip" ) then
 		mod.feverTrip = nil;
-	elseif ( not mod.feverTrip ) then
+	elseif ( not mod.feverTrip and mod.feverAlert ) then
 		if ( string.find(arg1, CT_RABOSS_HEIGAN_FEVERREGEXP) ) then
 			SendChatMessage(CT_RABOSS_HEIGAN_FEVERWARNING, "RAID");
 			mod.feverTrip = true;
@@ -236,16 +238,12 @@ function CT_RABoss_Thaddius_OnLoad()
 	CT_RABoss_AddMod("Thaddius", "Stuff.", 1, CT_RABOSS_LOCATIONS_NAXXRAMAS);
 	CT_RABoss_AddEvent("Thaddius", "CHAT_MSG_MONSTER_YELL", CT_RABoss_Thaddius_EventHandler);
 	CT_RABoss_AddEvent("Thaddius", "PLAYER_LEAVING_WORLD", CT_RABoss_Thaddius_EventHandler);
-	CT_RABoss_AddEvent("Thaddius", "CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS", CT_RABoss_Thaddius_EventHandler);
-	CT_RABoss_AddEvent("Thaddius", "CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE", CT_RABoss_Thaddius_EventHandler);
-	CT_RABoss_AddEvent("Thaddius", "CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE", CT_RABoss_Thaddius_EventHandler);
-	CT_RABoss_AddEvent("Thaddius", "CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE", CT_RABoss_Thaddius_EventHandler);
 	CT_RABoss_AddEvent("Thaddius", "CHAT_MSG_MONSTER_EMOTE", CT_RABoss_Thaddius_EventHandler);
+	CT_RABoss_AddEvent("Thaddius", "CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS", CT_RABoss_Thaddius_EventHandler);
 	CT_RABoss_AddEvent("Thaddius", "CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE", CT_RABoss_Thaddius_EventHandler);
 	CT_RABoss_AddEvent("Thaddius", "CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF", CT_RABoss_Thaddius_EventHandler);
 	CT_RABoss_AddDropDownButton("Thaddius", { CT_RABOSS_ANNOUNCE, CT_RABOSS_ANNOUNCE_INFO .. CT_RABOSS_REQ_LEADER_OR_PROM }, "CT_RABoss_ModInfo", "announce", "CT_RABoss_SetInfo");
 	CT_RABoss_AddDropDownButton("Thaddius", { CT_RABOSS_THADDIUS_THROW, CT_RABOSS_THADDIUS_THROW_INFO }, "CT_RABoss_ModInfo", "throw", "CT_RABoss_SetInfo");
-	CT_RABoss_AddDropDownButton("Thaddius", { CT_RABOSS_THADDIUS_TELLS, CT_RABOSS_THADDIUS_TELLS_INFO }, "CT_RABoss_ModInfo", "tells", "CT_RABoss_SetInfo");
 end
 
 function CT_RABoss_Thaddius_EventHandler(event)
@@ -268,14 +266,30 @@ function CT_RABoss_Thaddius_EventHandler(event)
 			CT_RABoss_Schedule("CT_RABoss_Thaddius_EventHandler", 240, "enrage1 min");
 			CT_RABoss_Schedule("CT_RABoss_Thaddius_EventHandler", 285, "enrage15 sec");
 			CT_RABoss_Schedule("CT_RABoss_Thaddius_EventHandler", 295, "enrage5 sec");
-			
-			if ( not mod.charges ) then
-				mod.charges = { };
-			else
-				for key, val in pairs(mod.charges) do
-					mod.charges[key] = nil;
+			mod.polarity = nil;
+		elseif ( arg1 == CT_RABOSS_THADDIUS_POLARITYSHIFTYELL ) then
+			--[[ Not working right now
+			local i = 1;
+			local debuff = UnitDebuff("player", 1);
+			local polarity;
+			while ( debuff ) do
+				if ( debuff == "Interface\\Icons\\Spell_ChargePositive" ) then
+					polarity = "POSITIVE";
+				elseif ( debuff == "Interface\\Icons\\Spell_ChargeNegative" ) then
+					polarity = "NEGATIVE";
+				end
+				
+				i = i + 1;
+				debuff = UnitDebuff("player", i);
+			end
+			if ( polarity ) then
+				if ( polarity ~= mod.polarity ) then
+					CT_RABoss_Announce(getglobal("CT_RABOSS_THADDIUS_"..polarity));
+				else
+					CT_RABoss_Announce(CT_RABOSS_THADDIUS_NOCHANGE);
 				end
 			end
+			mod.polarity = polarity; ]]
 		end
 	elseif ( event == "PLAYER_LEAVING_WORLD" ) then
 		mod.engaged = nil;
@@ -295,21 +309,6 @@ function CT_RABoss_Thaddius_EventHandler(event)
 	elseif ( event == "CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE" or event == "CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF" ) then
 		if ( arg1 == CT_RABOSS_THADDIUS_POLARITYCASTSTRING ) then
 			CT_RABoss_Announce(CT_RABOSS_THADDIUS_POLARITY, mod.announce);
-		end
-	elseif ( event == "CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE" or event == "CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE" or event == "CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE" ) then
-		if ( mod.tells ) then
-			local _, _, name, type, debuff = string.find(arg1, CT_RABOSS_THADDIUS_CHARGEREGEXP);
-			if ( name ) then
-				local charges = mod.charges;
-				if ( name == CT_RABOSS_THADDIUS_YOU and type == CT_RABOSS_THADDIUS_TYPE_YOU ) then
-					name = UnitName("player");
-				end
-
-				if ( debuff ~= charges[name] ) then
-					CT_RaidAssist2:SendSilentMessage(getglobal("CT_RABOSS_THADDIUS_CHARGE_"..debuff), "WHISPER", name);
-				end
-				charges[name] = debuff;
-			end
 		end
 	elseif ( event == "CHAT_MSG_MONSTER_EMOTE" ) then
 		if ( arg1 == CT_RABOSS_THADDIUS_ENRAGESTRING and arg2 == CT_RABOSS_THADDIUS_BOSSNAME ) then

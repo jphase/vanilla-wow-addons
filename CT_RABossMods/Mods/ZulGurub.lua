@@ -22,7 +22,7 @@ function CT_RABoss_Jeklik_EventHandler(event)
 	if ( event == "CHAT_MSG_MONSTER_YELL" and string.find(arg1, "I command you to rain fire down upon these invaders!$") ) then
 		CT_RABoss_Announce("*** BOMB BATS INCOMING ***", CT_RABoss_Mods["Jeklik"]["announce"]);
 		CT_RABoss_PlaySound(2);
-	elseif ( event == "CHAT_MSG_MONSTER_EMOTE" and string.find(arg1, "begins to cast a Great Heal!$") ) then
+	elseif ( event == "CHAT_MSG_MONSTER_EMOTE" and arg1 == "%s begins to cast a Great Heal!" ) then
 		CT_RABoss_Announce("*** CASTING HEAL ***", CT_RABoss_Mods["Jeklik"]["announce"]);
 		CT_RABoss_PlaySound(3);
 	end

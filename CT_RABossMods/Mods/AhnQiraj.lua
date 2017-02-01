@@ -417,7 +417,7 @@ function CT_RABoss_Ossirian_EventHandler(event)
 	elseif ( event == "CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE" ) then
 		if ( CT_RABoss_Mods["Ossirian the Unscarred"]["displayWeakness"] ) then
 			local _, _, debuffName = string.find(arg1, CT_RABOSS_OSSIRIAN_DEBUFFREGEXP);
-			if ( debuffName ) then
+			if ( debuffName and debuffName ~= "Expose" ) then
 				CT_RABoss_Announce(format(CT_RABOSS_OSSIRIAN_WEAKNESS, strupper(debuffName)), CT_RABoss_Mods["Ossirian the Unscarred"]["announce"]);
 				CT_RABoss_UnSchedule("CT_RABoss_Ossirian_EventHandler", "debuffFade5");
 				CT_RABoss_UnSchedule("CT_RABoss_Ossirian_EventHandler", "debuffFade15");

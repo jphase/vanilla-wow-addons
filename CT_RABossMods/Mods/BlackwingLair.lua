@@ -160,7 +160,7 @@ function CT_RABoss_Flamegor_EventHandler(event)
 		CT_RABoss_Announce(CT_RABOSS_FLAMEGOR_SHADOWFLAME_WARN, CT_RABoss_Mods["Flamegor"]["announce"]);
 		CT_RABoss_PlaySound(3);
 
-	elseif ( (event == "CHAT_MSG_MONSTER_EMOTE") and (arg1 == CT_RABOSS_FLAMEGOR_FRENZY) and (CT_RABoss_Mods["Flamegor"]["frenzyAlert"]) ) then
+	elseif ( (event == "CHAT_MSG_MONSTER_EMOTE") and (string.find(arg1, CT_RABOSS_FLAMEGOR_FRENZY)) and (CT_RABoss_Mods["Flamegor"]["frenzyAlert"]) ) then
 		CT_RABoss_Announce(CT_RABOSS_FLAMEGOR_TRANQSHOT, CT_RABoss_Mods["Flamegor"]["announce"]);
 		CT_RABoss_PlaySound(1);
 	end
@@ -273,7 +273,7 @@ function CT_RABoss_Chromaggus_OnEvent(event)
 		end
 	elseif ( event == "CHAT_MSG_MONSTER_EMOTE" ) then
 		-- Frenzy
-		if ( arg1 == CT_RABOSS_CHROMAGGUS_FRENZYEMOTE and arg2 == CT_RABOSS_CHROMAGGUS_BOSSNAME ) then
+		if ( arg2 == CT_RABOSS_CHROMAGGUS_BOSSNAME and string.find(arg1, CT_RABOSS_CHROMAGGUS_FRENZYEMOTE) ) then
 			if ( CT_RABoss_Mods["Chromaggus"]["frenzyWarning"] ) then
 				CT_RABoss_Announce(CT_RABOSS_CHROMAGGUS_FRENZYCASTWARNING, CT_RABoss_Mods["Chromaggus"]["announce"]);
 				CT_RABoss_PlaySound(2);
@@ -282,7 +282,7 @@ function CT_RABoss_Chromaggus_OnEvent(event)
 			CT_RABoss_Mods["Chromaggus"]["LastAction"] = currTime;
 			
 		-- Elemental Shield
-		elseif ( arg1 == CT_RABOSS_CHROMAGGUS_SHIELDEMOTE and arg2 == CT_RABOSS_CHROMAGGUS_BOSSNAME ) then
+		elseif ( arg2 == CT_RABOSS_CHROMAGGUS_BOSSNAME and string.find(arg1, CT_RABOSS_CHROMAGGUS_SHIELDEMOTE) ) then
 			if ( CT_RABoss_Mods["Chromaggus"]["shieldWarning"] ) then
 				CT_RABoss_Announce(CT_RABOSS_CHROMAGGUS_NEWVULNERABILITYWARNING, CT_RABoss_Mods["Chromaggus"]["announce"]);
 				CT_RABoss_PlaySound(1);
@@ -429,6 +429,7 @@ function CT_RABoss_Nefarian_EventHandler(event)
 	elseif ( event == "CHAT_MSG_MONSTER_YELL" and string.find(arg1, CT_RABOSS_NEFARIAN_LANDING_DETECT) ) then
 		CT_RABoss_Announce(CT_RABOSS_NEFARIAN_LANDING, CT_RABoss_Mods["Nefarian"]["announce"]);
 		CT_RABoss_PlaySound(1);
+		CT_RABoss_Schedule("CT_RABoss_Nefarian_EventHandler", 28, "incYell");
 
 	elseif ( event == "CHAT_MSG_MONSTER_YELL" and string.find(arg1, CT_RABOSS_NEFARIAN_ZERG_DETECT) ) then
 		CT_RABoss_Announce(CT_RABOSS_NEFARIAN_ZERG, CT_RABoss_Mods["Nefarian"]["announce"]);
